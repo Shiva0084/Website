@@ -1,0 +1,180 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #ffe6e6, #fff6f6);
+  color: #4d2c2c;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #d94f4f;
+}
+
+p {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 1.1em;
+}
+
+/* Landing Section */
+.landing {
+  background: #ffe1e1;
+  padding: 100px 20px;
+}
+
+.landing h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.landing p {
+  font-size: 1.5em;
+}
+
+/* Countdown Section */
+.countdown {
+  background: #fff0f5;
+}
+
+#timer {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #a03c3c;
+}
+
+/* Poem Section */
+.poem {
+  background: #fffafa;
+  padding: 80px 30px;
+  font-style: italic;
+  color: #502020;
+}
+
+.poem p {
+  white-space: pre-line;
+}
+
+/* Story Section */
+.story {
+  background: #ffeef0;
+}
+
+/* Gallery Section */
+.gallery {
+  background: #fff7f9;
+  font-style: italic;
+}
+
+/* Message Section */
+.message {
+  background: #ffecec;
+}
+
+textarea {
+  width: 80%;
+  max-width: 600px;
+  border: 2px solid #ffb3b3;
+  padding: 15px;
+  font-size: 1em;
+  border-radius: 10px;
+  background-color: #fffafa;
+  color: #703030;
+  resize: none;
+}
+
+/* Footer */
+footer {
+  background: #ffcccc;
+  padding: 20px;
+  font-weight: bold;
+  color: #4d1a1a;
+}
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+section:nth-child(2) { animation-delay: 0.5s; }
+section:nth-child(3) { animation-delay: 0.7s; }
+section:nth-child(4) { animation-delay: 0.9s; }
+section:nth-child(5) { animation-delay: 1.1s; }
+section:nth-child(6) { animation-delay: 1.3s; }
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  top: -30px;
+  font-size: 24px;
+  animation: floatDown linear;
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+/* Music Play Button Style */
+#music-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: #ff99cc;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.6);
+  text-transform: uppercase;
+}
+
+#music-btn:hover {
+  background-color: #ff66b2;
+  transform: scale(1.1);
+}
+
+#music-btn:active {
+  background-color: #ff3385;
+  transform: scale(0.95);
+}
